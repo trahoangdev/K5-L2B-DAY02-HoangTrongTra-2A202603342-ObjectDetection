@@ -11,6 +11,8 @@ outputs/
 # Không commit checkpoint .pt, kể cả khi nằm trong report/individual/assets.
 *.pt
 __pycache__/
+.venv-yolo/
+dataset/labels/*.cache
 
 # macOS
 .DS_Store

@@ -1,0 +1,52 @@
+{
+  "method": "AI-assisted visual geometry review; no random perturbations",
+  "author": "Codex / AI assistance",
+  "changes": [
+    {
+      "image": "drive_025",
+      "line": 3,
+      "new_xyxy_pixels": [
+        26,
+        229,
+        94,
+        298
+      ],
+      "reason": "Siết cạnh phải và cạnh dưới của taxi để giảm nền đường/bóng đổ ngoài phần xe nhìn thấy.",
+      "before_line": "0 0.096875 0.418750 0.112500 0.121875",
+      "before_sha256": "000bb39aa5197a5cc6e77f5e016d82944561d72d86d291b4b33254867e263456",
+      "after_line": "0 0.093750 0.411719 0.106250 0.107813",
+      "after_sha256": "147ee99dc6bc10b754261f8bf49ce78b8dfb2b42d85f7adc37c0105fa8219ecf",
+      "iou_before_after": 0.8354739601139601
+    },
+    {
+      "image": "drive_040",
+      "line": 11,
+      "new_xyxy_pixels": [
+        376,
+        268,
+        464,
+        349
+      ],
+      "reason": "Siết cạnh trên để bỏ nền đường; nới cạnh phải để bao hết phần đuôi xe nhìn thấy.",
+      "before_line": "0 0.653125 0.478906 0.133594 0.133594",
+      "before_sha256": "edeec5341ecf503ab3f0eeb3b89cc836e1189fc9325a3aed73b241e09ae19a73",
+      "after_line": "0 0.656250 0.482031 0.137500 0.126562",
+      "after_sha256": "519e9aba4e0a9b19ff0f31e979c0c410db8dd44aa1aa6c3a7b1774821b1faa6f",
+      "iou_before_after": 0.9064120125059307
+    }
+  ],
+  "evaluation_after": {
+    "iou_match_threshold": 0.5,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "mean_iou_of_matches": 0.9996,
+    "true_positive": 653,
+    "false_positive": 0,
+    "false_negative": 0,
+    "passed": true,
+    "required_f1": 0.8,
+    "required_mean_iou": 0.7
+  },
+  "training_version_note": "The two workspace geometry corrections are absent from Colab training commit 86e632d."
+}

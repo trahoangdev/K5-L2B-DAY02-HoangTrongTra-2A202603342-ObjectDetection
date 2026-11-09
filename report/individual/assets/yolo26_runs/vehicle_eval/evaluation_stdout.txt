@@ -1,0 +1,20 @@
+Ultralytics 8.4.208 🚀 Python-3.13.16 torch-2.14.1+cu130 CUDA:0 (Tesla T4, 14913MiB)
+YOLO26n summary (fused): 121 layers, 2,390,464 parameters, 0 gradients, 5.4 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 1896.4±298.6 MB/s, size: 76.8 KB)
+val: Scanning /content/Day2-Lab/dataset/labels/eval.cache... 10 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 10/10 2.8Mit/s 0.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 5.5it/s 0.2s
+                   all         10        113      0.633      0.566      0.642      0.436
+                   car         10         94      0.584      0.915      0.904      0.645
+                 truck          5          5      0.383        0.6      0.425      0.339
+                   bus          2          2          1          0      0.495      0.346
+                   van          6         12      0.565       0.75      0.743      0.413
+Speed: 0.4ms preprocess, 5.6ms inference, 0.0ms loss, 1.5ms postprocess per image
+Results saved to /content/Day2-Lab/outputs/yolo26_runs/vehicle_eval
+{
+  "precision": 0.6329828640189161,
+  "recall": 0.5662234042553191,
+  "map50": 0.6417036407002508,
+  "map50_95": 0.43577098995879676,
+  "eval_images": 10,
+  "checkpoint": "/content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation/weights/best.pt"
+}

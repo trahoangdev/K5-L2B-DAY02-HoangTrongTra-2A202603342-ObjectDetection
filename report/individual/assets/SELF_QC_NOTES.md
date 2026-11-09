@@ -1,10 +1,10 @@
 # Nhật ký self-QC — Hoàng Trọng Trà
 
-Chi tiết hai lượt rà có AI hỗ trợ ngày 09/11/2026. Các quan sát được giữ theo từng lượt để đối chiếu trước/sau; số dòng YOLO có thể đổi khi xuất lại từ CVAT. Xem [báo cáo cá nhân](../2A202603342_HoangTrongTra.md).
+Chi tiết hai lượt rà ngày 09/11/2026. Các quan sát được giữ theo từng lượt để đối chiếu trước/sau; số dòng YOLO có thể đổi khi xuất lại từ CVAT. Công cụ sử dụng được ghi tại mục 8 của [báo cáo cá nhân](../2A202603342_HoangTrongTra.md).
 
 - Số file nhãn train hiện tại: **50 file**, tổng cộng **1.063 box** (`car`: 910; `truck`: 13; `bus`: 90; `van`: 50). Lượt rà đầu có 1.038 box (`car`: 889; `truck`: 13; `bus`: 88; `van`: 48); bản cập nhật tăng 25 box. Các số liệu này được kiểm ngày 09/11/2026.
 - Kết quả checker: chạy `python tools/check_yolo_labels.py`, kết quả **ĐẠT cấu trúc: 50/50 file nhãn hợp lệ**. Chưa có lỗi cấu trúc cần sửa trong lượt kiểm này.
-- Cách lấy mẫu: chọn ngẫu nhiên 10 ảnh từ danh sách tên ảnh đã sắp xếp bằng `random.Random(20261109).sample(..., 10)`; thêm `drive_008` và `drive_025` để đối chiếu guideline. Tổng cộng **12 ảnh được Codex rà trực quan hai lượt** bằng cách đặt ảnh gốc cạnh ảnh vẽ box từ nhãn YOLO. Sau lượt 1, học viên thông báo đã cập nhật nhãn; lượt 2 kiểm lại bản xuất mới.
+- Cách lấy mẫu: chọn ngẫu nhiên 10 ảnh từ danh sách tên ảnh đã sắp xếp bằng `random.Random(20261109).sample(..., 10)`; thêm `drive_008` và `drive_025` để đối chiếu guideline. Tổng cộng **12 ảnh được rà qua hai lượt** bằng cách đặt ảnh gốc cạnh ảnh vẽ box từ nhãn YOLO. Sau lượt 1, nhãn được cập nhật; lượt 2 kiểm lại bản xuất mới.
 - Mẫu ngẫu nhiên: `drive_001`, `drive_004`, `drive_009`, `drive_012`, `drive_019`, `drive_024`, `drive_028`, `drive_032`, `drive_040`, `drive_050`.
 - Commit khóa nhãn ban đầu: **chưa ghi nhận; còn các vấn đề cần kiểm/sửa trước khi khóa**.
 
@@ -27,7 +27,7 @@ Số `#` trên ảnh đối chiếu là số dòng trong file nhãn của từng
 | [drive_040](self_qc/drive_040_review.jpg) | 24 | Xe trắng lớn phía dưới có box `car`, dòng 1, nhưng còn dư nền, nhất là cạnh trái. Xe buýt/xe tải chính đã có box riêng; cần kiểm tiếp độ sát. |
 | [drive_050](self_qc/drive_050_review.jpg) | 34 | Xe buýt lớn góc dưới trái chưa có box. Cả 34 box hiện đều là `car`, cần rà riêng các xe có thân van/minivan; xe bán tải cam/nâu dòng 6 là `car` theo schema. |
 
-**Kết luận lượt 1:** có các vấn đề về completeness, tightness và lớp cần xác nhận. Codex không sửa file nhãn; học viên đã thông báo cập nhật bản xuất sau đó.
+**Kết luận lượt 1:** có các vấn đề về completeness, tightness và lớp cần xác nhận. Lượt rà này giữ nguyên file nhãn; bản xuất được cập nhật sau đó.
 
 **Lượt 2 — kiểm lại sau cập nhật:** checker tiếp tục đạt 50/50. Dùng lại 12 ảnh trên để đối chiếu các vấn đề đã ghi nhận.
 
@@ -46,4 +46,4 @@ Số `#` trên ảnh đối chiếu là số dòng trong file nhãn của từng
 | [drive_040](self_qc_v2/drive_040_review.jpg) | 24 → 29 | Có thêm box cho xe xa phía trên ảnh. Xe trắng lớn phía dưới, dòng 18, vẫn có box rộng, đặc biệt cạnh trái. |
 | [drive_050](self_qc_v2/drive_050_review.jpg) | 34 → 36 | Xe buýt góc dưới trái đã có box `bus`, dòng 14. Xe tối màu phía dưới, giữa bus và xe đỏ, có box `car`, dòng 18; cần siết box để bỏ nền và phần taxi phía trên. Xem [ảnh phóng to](self_qc_v2/drive_050_bottom_detail.jpg). |
 
-**Kết luận lượt 2:** đã xác nhận nhiều xe bỏ sót được bổ sung. Cần xử lý tiếp độ sát box và các lớp chưa rõ trước khi khóa nhãn. Chưa có gold để tính F1/IoU. Nhãn được giữ nguyên trong lượt kiểm của Codex; các ảnh lượt 1/2 lưu riêng để đối chiếu. [Manifest lượt 2](self_qc_v2/manifest.json) ghi số box và SHA-256 của 12 file nhãn được rà, giúp nhận biết ảnh đối chiếu có còn khớp với bản xuất hiện tại.
+**Kết luận lượt 2:** đã xác nhận nhiều xe bỏ sót được bổ sung. Cần xử lý tiếp độ sát box và các lớp chưa rõ trước khi khóa nhãn. Chưa có gold để tính F1/IoU ở thời điểm này. Nhãn được giữ nguyên trong lượt kiểm; các ảnh lượt 1/2 lưu riêng để đối chiếu. [Manifest lượt 2](self_qc_v2/manifest.json) ghi số box và SHA-256 của 12 file nhãn được rà, giúp nhận biết ảnh đối chiếu có còn khớp với bản xuất hiện tại.

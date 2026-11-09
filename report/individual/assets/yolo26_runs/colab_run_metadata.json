@@ -1,0 +1,110 @@
+{
+  "source_notebook": "https://colab.research.google.com/drive/1U0jC_pM6QEiqYfd4WMpypBf-qWMiI_4M",
+  "notebook_sha256": "48e826af238a47ee982515e4d53fa591a7d026c8553150c5f7437f0eb5ce927a",
+  "source_archive_name": "day2_colab_outputs.zip",
+  "archive_sha256": "639de48a1cbdfc23df09f58913ed8696dae8c8bf82c908f6ed54bb5ccdc56cc9",
+  "repository_commit_from_notebook": "86e632d",
+  "runtime": {
+    "platform": "Google Colab",
+    "gpu": "Tesla T4",
+    "gpu_memory_mib": 14913,
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "ultralytics": "8.4.208"
+  },
+  "training": {
+    "model": "yolo26n.pt",
+    "epochs": 50,
+    "imgsz": 640,
+    "batch_argument": -1,
+    "autobatch_selected": 45,
+    "actual_workers_from_log": 2,
+    "seed": 20260909
+  },
+  "per_class_display_rounded_from_stdout": [
+    {
+      "name": "car",
+      "images": 10,
+      "instances": 94,
+      "precision": 0.584,
+      "recall": 0.915,
+      "map50": 0.904,
+      "map50_95": 0.645
+    },
+    {
+      "name": "truck",
+      "images": 5,
+      "instances": 5,
+      "precision": 0.383,
+      "recall": 0.6,
+      "map50": 0.425,
+      "map50_95": 0.339
+    },
+    {
+      "name": "bus",
+      "images": 2,
+      "instances": 2,
+      "precision": 1.0,
+      "recall": 0.0,
+      "map50": 0.495,
+      "map50_95": 0.346
+    },
+    {
+      "name": "van",
+      "images": 6,
+      "instances": 12,
+      "precision": 0.565,
+      "recall": 0.75,
+      "map50": 0.743,
+      "map50_95": 0.413
+    }
+  ],
+  "label_version_note": "Colab commit 86e632d predates the two current workspace geometry corrections in drive_025 and drive_040.",
+  "source_label_git_blob_sha": {
+    "dataset/labels/train/drive_025.txt": "2e501a2e682f974332c07d87025255257eb2d5b4",
+    "dataset/labels/train/drive_040.txt": "c7260fd39965a0a6caba439285c986bc5ffc93d3"
+  },
+  "imported_files": [
+    "report/individual/assets/yolo26_runs/vehicle_eval/BoxF1_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_eval/BoxR_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_eval/BoxPR_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_eval/val_batch0_labels.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_eval/confusion_matrix.png",
+    "report/individual/assets/yolo26_runs/vehicle_eval/BoxP_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_eval/val_batch0_pred.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_eval/confusion_matrix_normalized.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/BoxF1_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/results.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/train_batch2.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/BoxR_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/args.yaml",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/BoxPR_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/train_batch81.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/val_batch0_labels.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/train_batch80.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/train_batch0.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/train_batch82.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/confusion_matrix.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/BoxP_curve.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/train_batch1.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/val_batch0_pred.jpg",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/confusion_matrix_normalized.png",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/results.csv",
+    "report/individual/assets/yolo26_runs/vehicle_annotation/labels.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_052.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_051.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_057.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_053.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_054.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_056.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_058.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_059.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_055.jpg",
+    "report/individual/assets/eval_predictions/visuals/drive_060.jpg"
+  ],
+  "excluded": [
+    "checkpoint .pt files",
+    "nested ZIP",
+    "annotation QC files from top-level archive except separately named snapshot"
+  ]
+}
