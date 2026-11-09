@@ -1,0 +1,32 @@
+{
+  "review_round": 2,
+  "source": "student-provided YOLO labels",
+  "label_sha256": {
+    "drive_001.txt": "52226198523d77be66807befbc1dc8dd0e8ef8ee2c078cf747d102abda9905d5",
+    "drive_004.txt": "eb971f33ae4dc94c9b7da0a6d51c6600bb4134213c1b192e82b2aab8a722d967",
+    "drive_008.txt": "dafc194b2b892d56b80d824dc80ba73523a00c2066ac2088a6e18b1a2c4f418e",
+    "drive_009.txt": "5b61bdc359fce28c89271d00fc9c0fd75856f47b133f408fb7a251fb99f9015d",
+    "drive_012.txt": "8c36ef4ca6cfa95937edf186ae3a8d908430dcd5e627000bc54d1bb8ef3a569e",
+    "drive_019.txt": "88d4ed63ac318d353543acfc82f2c0d69be245c3614655ac9a0f78a4a67d6623",
+    "drive_024.txt": "d7af3b9a2ef76cfd72f169fc4e5cd864783077e84d1f4203482171aa0418fbca",
+    "drive_025.txt": "6c7cd46f9e8ebce9ecf51917796af9e78ad3051a6654e4d92941199bd8a266b5",
+    "drive_028.txt": "837cf6e223a664affbad3be966066562ba3fa331fb04b420fd009939aaff048e",
+    "drive_032.txt": "1b621442dcf87eca54411229ed8e08c146cc7ba29b048f601ae4b96293169141",
+    "drive_040.txt": "842c475f37affd529434f367fdd663c237125432d33039932ff3c1f36ef78ba3",
+    "drive_050.txt": "a2ea5bae87549afffbf36003110a670cdbdc9f280fe74ecbc0b7660ed7d64dae"
+  },
+  "box_counts": {
+    "drive_001": 16,
+    "drive_004": 17,
+    "drive_008": 24,
+    "drive_009": 33,
+    "drive_012": 41,
+    "drive_019": 32,
+    "drive_024": 35,
+    "drive_025": 8,
+    "drive_028": 20,
+    "drive_032": 6,
+    "drive_040": 29,
+    "drive_050": 36
+  }
+}
