@@ -2,6 +2,8 @@
 
 > Bản guideline có AI hỗ trợ. Ngày 09/11/2026, Codex đã rà hai lượt trên cùng 12 ảnh train, gồm lượt đối chiếu sau khi học viên thông báo cập nhật nhãn. Nhiều xe bỏ sót đã được bổ sung; vẫn còn các cạnh box và lớp cần kiểm lại. Chưa ghi nhận xác nhận của giảng viên cho ca xe cứu hộ.
 
+> Cập nhật sau rework với gold: học viên xác nhận tự chỉnh trên ảnh/CVAT. Checker đạt 50/50; F1 và mean IoU kiểm lại đều 1,0000. Các số dòng và quan sát trong hai lượt self-QC dưới đây thuộc bản trước gold; xem kết quả hiện tại tại mục 4 của [báo cáo cá nhân](report/individual/2A202603342_HoangTrongTra.md). Bộ nhãn hiện có 653 box và trùng gold về lớp/tọa độ trên 50 file.
+
 ## Định nghĩa lớp
 
 | ID | Lớp | Định nghĩa theo schema của bài | Ví dụ/điểm phân biệt |
